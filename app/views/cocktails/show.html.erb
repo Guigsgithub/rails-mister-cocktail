@@ -11,7 +11,10 @@
      class:'btn btn-warning' %> 
    </li>
   <% end %>
-  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+
+  <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
 </ul>
 
 <%= link_to "Ajoute un ingrédient et son dosage", new_cocktail_dose_path(@cocktail), class:'btn btn-success' %>
