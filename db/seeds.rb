@@ -12,8 +12,11 @@ url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients_serialized = open(url).read
 ingredient = JSON.parse(ingredients_serialized)
 
-ingredient[:drinks].each do |ingredient|
-  Ingredient.create(name: ingredient[:strIngredient1])
+puts "Going to create seeds"
+ingredient['drinks'].each do |row|
+  puts "#{row['strIngredient1']}"
+  Ingredient.create(name: row['strIngredient1'])
+  puts "1 seed created"
 end
 
 
