@@ -19,4 +19,9 @@
   <div class="row">
     <%= link_to 'Ajouter un nouveau Cocktail', new_cocktail_path %>
   </div>
+
+  <%= cl_image_tag("https://res.cloudinary.com/dttrrglqc/image/upload/v1605276762/cpvz4axvp6zs7llvncmo.jpg", width: 400, height: 300, crop: :fill) %>
+
+  <%= cl_image_tag("https://res.cloudinary.com/dttrrglqc/image/upload/v1605276776/zcnjlmpokblv7hwbwxzv.jpg", width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
 </div>
